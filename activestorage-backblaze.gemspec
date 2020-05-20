@@ -11,5 +11,5 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/gten/activestorage-backblaze'
   s.metadata = { "source_code_uri" => "https://github.com/gten/activestorage-backblaze" }
 
-  s.add_dependency "fog-backblaze", "~> 0.3.0", git: 'https://github.com/pictrs/fog-backblaze.git'
+  s.add_dependency "fog-backblaze", "~> 0.3.0", git: 'git:github.com/pictrs/fog-backblaze.git'
 end
