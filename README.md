@@ -1,5 +1,11 @@
 This is a gem for using backblaze with activestorage.
 
+Use this gem with my fork of fog-backblaze:
+
+```ruby
+gem 'fog-backblaze', '~> 0.3.0', :git => 'https://github.com/PascalMayr/fog-backblaze.git'
+```
+
 # Usage:
 
 ```ruby
