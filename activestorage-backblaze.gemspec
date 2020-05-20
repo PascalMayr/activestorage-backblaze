@@ -10,4 +10,7 @@ Gem::Specification.new do |s|
   s.email = "geetan123321@gmail.com"
   s.homepage = 'https://github.com/gten/activestorage-backblaze'
   s.metadata = { "source_code_uri" => "https://github.com/gten/activestorage-backblaze" }
+  #s.add_dependency "fog-backblaze", "~> 0.3.0" // added fork into the projects Gemfile
+  s.add_dependency 'mime-types', '~> 3.3', '>= 3.3.1'
+
 end

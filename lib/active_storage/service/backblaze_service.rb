@@ -1,4 +1,5 @@
 require "fog/backblaze"
+require 'mime/types'
 
 class ActiveStorage::Service::BackblazeService < ActiveStorage::Service
   def initialize(key_id:, key_token:, bucket_name:, bucket_id:)
@@ -21,7 +22,7 @@ class ActiveStorage::Service::BackblazeService < ActiveStorage::Service
       begin
         io.binmode
         io.rewind
-        @connection.put_object(@bucket_name, key, io.read, {content_type: "image/jpeg"})
+        @connection.put_object(@bucket_name, key, io.read, {content_type: MIME::Types.type_for(io.path).first.content_type})
       rescue => e
         puts "ERROR - 101"
         puts e.inspect
