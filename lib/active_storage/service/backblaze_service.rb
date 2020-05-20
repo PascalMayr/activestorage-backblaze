@@ -21,7 +21,7 @@ class ActiveStorage::Service::BackblazeService < ActiveStorage::Service
       begin
         io.binmode
         io.rewind
-        @connection.put_object(@bucket_name, key, io.read)
+        @connection.put_object(@bucket_name, key, io.read, {content_type: "image/jpeg"})
       rescue => e
         puts "ERROR - 101"
         puts e.inspect
